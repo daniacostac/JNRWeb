@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JNR - Your Universe of Music</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="aurora-background"></div>
+
+    <nav class="main-nav">
+        <div class="nav-content">
+            <a href="#" class="nav-logo">JNR</a>
+            <div class="nav-links">
+                <a href="#discover"><svg class="icon nav-icon"><use xlink:href="icons.svg#icon-search"></use></svg>Discover</a>
+                <a href="#rate"><svg class="icon nav-icon"><use xlink:href="icons.svg#icon-star"></use></svg>Rate</a>
+                <a href="#collection"><svg class="icon nav-icon"><use xlink:href="icons.svg#icon-library"></use></svg>Collection</a>
+                <a href="#tech"><svg class="icon nav-icon"><use xlink:href="icons.svg#icon-cpu"></use></svg>Tech</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1 class="animate-on-scroll" data-animation="fade-up">JamNRate (JNR)</h1>
+            <p class="subtitle animate-on-scroll" data-animation="fade-up" data-delay="100">Your universe of music. Discovered. Rated. Collected.</p>
+            <a href="#discover" class="cta-button animate-on-scroll" data-animation="fade-up" data-delay="200">
+                Explore Features
+                <svg class="icon cta-icon"><use xlink:href="icons.svg#icon-arrow-right"></use></svg>
+            </a>
+        </div>
+        <div class="hero-mockup-container animate-on-scroll" data-animation="zoom-in" data-delay="300">
+            <img src="./images/overview.JPG" alt="JNR application interface" class="hero-mockup-img">
+        </div>
+    </header>
+
+    <main>
+        <section id="discover" class="feature-section">
+            <div class="content-wrapper">
+                <div class="text-content animate-on-scroll" data-animation="fade-right">
+                    <div class="feature-header">
+                        <svg class="icon feature-icon"><use xlink:href="icons.svg#icon-search"></use></svg>
+                        <h2>Discover with Precision.</h2>
+                    </div>
+                    <p>Dive into a vast ocean of music. JNR's powerful search, backed by the comprehensive Discogs and Last.fm APIs, lets you find any album or artist instantly. The journey to your next favorite jam starts here.</p>
+                </div>
+                <div class="visual-content animate-on-scroll" data-animation="fade-left" data-delay="200">
+                    <div class="visual-mockup"><img src="./images/search.JPG" alt="Searching for an album in JNR"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="rate" class="feature-section">
+            <div class="content-wrapper reverse">
+                 <div class="text-content animate-on-scroll" data-animation="fade-left">
+                    <div class="feature-header">
+                        <svg class="icon feature-icon"><use xlink:href="icons.svg#icon-star"></use></svg>
+                        <h2>Make Your Voice Heard.</h2>
+                    </div>
+                    <p>JNR is built for passionate listeners. Give albums a precise 0-10 rating, write detailed reviews, and see how your tastes compare with the community. Your ratings help shape the charts.</p>
+                </div>
+                <div class="visual-content animate-on-scroll" data-animation="fade-right" data-delay="200">
+                     <div class="visual-mockup"><img src="./images/review.JPG" alt="Rating and reviewing an album"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="collection" class="feature-section">
+            <div class="content-wrapper">
+                 <div class="text-content animate-on-scroll" data-animation="fade-right">
+                    <div class="feature-header">
+                        <svg class="icon feature-icon"><use xlink:href="icons.svg#icon-library"></use></svg>
+                        <h2>Curate Your Digital Shelves.</h2>
+                    </div>
+                    <p>Build your personal music library. The "My Albums" view is your dedicated space for every album you've rated or saved, creating a perfect snapshot of your musical identity.</p>
+                </div>
+                <div class="visual-content animate-on-scroll" data-animation="fade-left" data-delay="200">
+                    <div class="visual-mockup"><img src="./images/myalbum.JPG" alt="My Albums collection screen"></div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="tech" class="tech-stack-section">
+            <h2 class="animate-on-scroll" data-animation="fade-up">Under the Hood</h2>
+            <p class="animate-on-scroll" data-animation="fade-up" data-delay="100">Built with a robust and modern technology stack for a seamless desktop experience.</p>
+            <div class="tech-grid">
+                <div class="tech-item animate-on-scroll" data-animation="fade-up" data-delay="200">
+                    <svg class="icon tech-icon"><use xlink:href="icons.svg#icon-windows"></use></svg>
+                    <h3>WPF</h3>
+                    <span>Rich Desktop UI</span>
+                </div>
+                <div class="tech-item animate-on-scroll" data-animation="fade-up" data-delay="300">
+                    <svg class="icon tech-icon"><use xlink:href="icons.svg#icon-code"></use></svg>
+                    <h3>C# & .NET</h3>
+                    <span>Core Logic</span>
+                </div>
+                 <div class="tech-item animate-on-scroll" data-animation="fade-up" data-delay="400">
+                    <svg class="icon tech-icon"><use xlink:href="icons.svg#icon-database"></use></svg>
+                    <h3>MySQL</h3>
+                    <span>User Data</span>
+                </div>
+                 <div class="tech-item animate-on-scroll" data-animation="fade-up" data-delay="500">
+                    <svg class="icon tech-icon"><use xlink:href="icons.svg#icon-radio"></use></svg>
+                    <h3>Last.fm API</h3>
+                    <span>Music Data</span>
+                </div>
+                <div class="tech-item animate-on-scroll" data-animation="fade-up" data-delay="600">
+                    <svg class="icon tech-icon"><use xlink:href="icons.svg#icon-disc"></use></svg>
+                    <h3>Discogs API</h3>
+                    <span>Discography</span>
+                </div>
+                 <div class="tech-item animate-on-scroll" data-animation="fade-up" data-delay="700">
+                    <svg class="icon tech-icon"><use xlink:href="icons.svg#icon-newspaper"></use></svg>
+                    <h3>NewsAPI</h3>
+                    <span>Music News</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Daniel Acosta Castilla. JNR Application Project.</p>
+        <p>This webpage is a showcase. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
