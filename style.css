@@ -102,7 +102,7 @@ body {
   border-bottom: 1px solid rgba(170, 170, 200, 0.1);
   
   transition: background 0.3s ease;
-  transform: translateY(0); /* MODIFIED: Set to 0 to make it always visible */
+  transform: translateY(0);
 }
 
 .nav-content {
@@ -113,14 +113,25 @@ body {
   max-width: 1200px;
 }
 
+/* MODIFIED: Removed font styles, added display properties for image container */
 .nav-logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--text-primary);
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
-/* ADDED: This block makes the nav links align horizontally */
+/* ADDED: Styles for the new logo image */
+.logo-image {
+  height: 40px; /* Adjust this value to fit your logo's aspect ratio */
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo:hover .logo-image {
+  transform: scale(1.05);
+}
+
+
 .nav-links {
   display: flex;
 }
@@ -314,6 +325,77 @@ body {
   display: block;
   border-radius: 6px;
 }
+
+/* =========================== */
+/* 5A. HOW IT WORKS / GUIDE    */
+/* =========================== */
+
+/* Add these helper classes for more flexible layouts */
+.column-layout {
+    flex-direction: column;
+}
+.center-align {
+    text-align: center;
+}
+.section-title {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    margin-bottom: 1rem;
+}
+.section-subtitle {
+    color: var(--text-secondary);
+    margin-bottom: 4rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.guide-steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
+.guide-step {
+    background: var(--bg-dark-slate);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(170, 170, 200, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.guide-step:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-purple);
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.guide-step h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.guide-step p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
 
 /* ======================= */
 /* 6. TECH STACK SECTION */
