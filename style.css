@@ -113,24 +113,12 @@ body {
   max-width: 1200px;
 }
 
-/* MODIFIED: Removed font styles, added display properties for image container */
 .nav-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
   text-decoration: none;
-  display: flex;
-  align-items: center;
 }
-
-/* ADDED: Styles for the new logo image */
-.logo-image {
-  height: 40px; /* Adjust this value to fit your logo's aspect ratio */
-  width: auto;
-  transition: transform 0.3s ease;
-}
-
-.nav-logo:hover .logo-image {
-  transform: scale(1.05);
-}
-
 
 .nav-links {
   display: flex;
@@ -191,6 +179,14 @@ body {
   font-weight: 400;
 }
 
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  align-items: center;
+}
+
 .cta-button {
   display: inline-flex;
   align-items: center;
@@ -217,6 +213,35 @@ body {
 .cta-button:hover .cta-icon {
   transform: translateX(4px);
 }
+
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 12px 30px;
+  background: transparent;
+  color: var(--text-primary);
+  border: 2px solid var(--accent-purple);
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.download-button:hover {
+  background: var(--accent-purple);
+  color: white;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(138, 43, 226, 0.25);
+}
+
+.download-icon {
+  width: 1.2em;
+  height: 1.2em;
+  stroke-width: 0; /* This icon is 'filled' */
+  fill: currentColor;
+}
+
 
 .hero-mockup-container {
   margin-top: 4rem;
@@ -326,77 +351,6 @@ body {
   border-radius: 6px;
 }
 
-/* =========================== */
-/* 5A. HOW IT WORKS / GUIDE    */
-/* =========================== */
-
-/* Add these helper classes for more flexible layouts */
-.column-layout {
-    flex-direction: column;
-}
-.center-align {
-    text-align: center;
-}
-.section-title {
-    font-size: clamp(2rem, 5vw, 2.5rem);
-    margin-bottom: 1rem;
-}
-.section-subtitle {
-    color: var(--text-secondary);
-    margin-bottom: 4rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.guide-steps-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    width: 100%;
-}
-
-.guide-step {
-    background: var(--bg-dark-slate);
-    padding: 2rem;
-    border-radius: 12px;
-    border: 1px solid rgba(170, 170, 200, 0.1);
-    text-align: left;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.guide-step:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent-purple);
-}
-
-.step-number {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-image: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
-    color: var(--text-primary);
-    font-size: 1.25rem;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-}
-
-.guide-step h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-    color: var(--text-primary);
-}
-
-.guide-step p {
-    color: var(--text-secondary);
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-
 /* ======================= */
 /* 6. TECH STACK SECTION */
 /* ======================= */
@@ -464,7 +418,31 @@ body {
 }
 
 /* ======================= */
-/* 7. FOOTER */
+/* 7. DOWNLOAD SECTION     */
+/* ======================= */
+.download-section {
+    background: var(--bg-dark-navy);
+    border-top: 1px solid rgba(170, 170, 200, 0.1);
+}
+
+.download-section h2 {
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-pink));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.download-section p {
+    margin-bottom: 2.5rem;
+}
+
+.download-section .cta-button .cta-icon {
+    /* Prevent the windows icon from moving on hover */
+    transform: none;
+}
+
+/* ======================= */
+/* 8. FOOTER               */
 /* ======================= */
 footer {
   text-align: center;
@@ -476,7 +454,7 @@ footer {
 }
 
 /* ======================= */
-/* 8. ANIMATIONS */
+/* 9. ANIMATIONS           */
 /* ======================= */
 .animate-on-scroll {
   opacity: 0;
@@ -496,7 +474,7 @@ footer {
 
 
 /* ======================= */
-/* 9. RESPONSIVE DESIGN */
+/* 10. RESPONSIVE DESIGN   */
 /* ======================= */
 @media (max-width: 900px) {
   .content-wrapper, .content-wrapper.reverse {
@@ -520,7 +498,8 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .nav-links a {
+  /* This rule correctly hides all nav links, including the new "Download" one */
+  .nav-links {
     display: none;
   }
 
